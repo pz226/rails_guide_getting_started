@@ -8,6 +8,11 @@
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@article.picture_url) if @article.picture.present? %>
+</p>
  
 <h2>Comments</h2>
 <%= render @article.comments %>
