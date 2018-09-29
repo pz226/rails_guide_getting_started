@@ -26,8 +26,14 @@ class ArticlesController < ApplicationController
   end
   
   def index
-    @articles = Article.all
+    @article = Article.all
+    @hash = Gmaps4rails.build_markers(@articles) do |place, marker|
+      marker.lat place.latitude
+      marker.lng place.longitude
+      marker.infowindow place.name
+    end
   end
+
   
   def update
     @article = Article.find(params[:id])
