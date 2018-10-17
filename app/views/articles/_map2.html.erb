@@ -8,12 +8,13 @@
     </style>
   </head>
   <body>
+    <div id="map2"></div>
     <script>
       function initMap(){
 	  var mapPosition = {lat:33.0000, lng:141.0000}
-	  var mapArea = document.getElementById('maps'):
+	  var mapArea = document.getElementById('map2');
 	  var mapOptions = {
-	      center: ,mapPosition,
+	      center: mapPosition,
 	      zoom: 16,
 	  };
 	  var map = new google.maps.Map(mapArea, mapOptions);
