@@ -1,5 +1,4 @@
-
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Places Search Box</title>
     <style>
@@ -104,6 +103,7 @@
           mapTypeId: 'roadmap'
         });
 
+
         // Create the search box and link it to the UI element.
         var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
@@ -113,6 +113,27 @@
         map.addListener('bounds_changed', function() {
           searchBox.setBounds(map.getBounds());
         });
+	   $(function(){
+       var mapOptions = {
+           zoom: 15,
+           center: new google.maps.LatLng(35.681298, 139.766247)
+       };
+       var map = new google.maps.Map($('#map').get(0), mapOptions);
+
+       //mapをクリックしたときのイベントを設定
+       google.maps.event.addListener(map, 'click', mylistener);
+
+       //クリックしたときの処理
+       function mylistener(event){
+              //marker作成
+              var marker = new google.maps.Marker();
+              //markerの位置を設定
+              //event.latLng.lat()でクリックしたところの緯度を取得
+              marker.setPosition(new google.maps.LatLng(event.latLng.lat(), event.latLng.lng()));
+              //marker設置
+              marker.setMap(map);
+       }
+   });
 
         var markers = [];
         // Listen for the event fired when the user selects a prediction and retrieve
@@ -163,8 +184,8 @@
           map.fitBounds(bounds);
         });
       }
-
+       
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdC0D8VNUaH_zkz1jbOjTfrDzeTP3Y4I0&libraries=places&callback=initAutocomplete"
          async defer></script>
- 
+
