@@ -64,3 +64,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'carrierwave'
 
 gem 'gmaps4rails'
+
+gem 'jquery-rails' 
+gem 'jquery-ui-rails'
