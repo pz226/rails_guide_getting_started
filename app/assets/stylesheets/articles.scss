@@ -1,11 +1,33 @@
-// Place all the styles related to the Articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-h1{
-  background: radial-gradient(skyblue, aqua);
-  height: 30px;
+.pages-body{
+    margin: 0px;
+    padding: 0px;
+    background: url(background-photo2.jpg) center center / cover no-repeat fixed;
+    font-family: 'Anton', sans-serif;
 }
 
-body{
-  background: url(background-photo.jpg) center center / cover no-repeat fixed;
+.header{
+    width: 960px;
+    height: 100px;
+    margin: 0 auto;
+    paddint-top: 0px;
+    background-color: #008000;
+    height: 50px;
+}
+
+.header h1{
+    float: left;
+    font-size: 50px;
+}
+
+.header li{
+    float: right;
+    //margin: 0px 20px;
+    list-style: none;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+
+.header-list a:hover{
+    tet-decoration: underline;
 }

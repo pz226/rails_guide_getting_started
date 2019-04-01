@@ -17,10 +17,12 @@
 <%= render @article.comments %>
  
 <h2>Add a comment:</h2>
-<%= render "comments/form" %>
+<%= render "form" %>
+
  
 <%= link_to 'Edit Article', edit_article_path(@article) %> |
 <%= link_to 'Back to Articles', articles_path %>
 
 <div id="a"></div>
-<%= render "map" %>
+
+<%= render :partial => "map2", :object => @article %>

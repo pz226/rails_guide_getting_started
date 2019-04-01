@@ -120,6 +120,8 @@
                 });
 
                 document.getElementById("a").innerHTML=e.latLng;
+                document.getElementById("article_lat").value=e.latLng.lat();
+                document.getElementById("article_lng").value=e.latLng.lng();
 
         });
         }

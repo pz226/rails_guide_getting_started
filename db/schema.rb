@@ -20,8 +20,9 @@ ActiveRecord::Schema.define(version: 2018_11_03_012254) do
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
     t.string "picture"
+    t.string "lat"
+    t.string "lng"
   end
 
   create_table "comments", force: :cascade do |t|
